@@ -54,17 +54,17 @@ public class Main {
 
             System.out.println("\n🔥 Інформація про драконів:");
             for (Dragon d : dragons) {
-                System.out.println(d);
+                d.showInfo();
             }
 
             System.out.println("\n🐲 Дракони підросли!");
             for (Dragon d : dragons) {
-                System.out.println(d);
+                d.growUp();
             }
 
             System.out.println("\n📈 Останні зміни:");
             for (Dragon d : dragons) {
-                System.out.println(d);
+                d.showInfo();
             }
 
             if (dragons.length > 0) {
