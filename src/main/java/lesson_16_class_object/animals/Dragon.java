@@ -43,14 +43,6 @@ public class Dragon {
         return weight;
     }
 
-        @Override
-        public String toString() {
-            return "Dragon{" +
-                    "name='" + name + '\'' +
-                    ", age=" + age +
-                    ", weight=" + weight +
-                    '}';
-        }
 
     public void showInfo() {
         System.out.println("Ім’я: " + name + ", Вік: " + age + ", Вага: " + weight + " кг");
@@ -60,5 +52,22 @@ public class Dragon {
         this.age++;
         this.weight += 10;
         System.out.println(name + " підріс! Тепер йому " + age + " років і вага " + weight + " кг 💪");
+    }
+
+    public void voice() {
+        System.out.println(name + " Будьте обережні зі мною! Я можу спалити ваші оселі 😤 ");
+    }
+
+    public void breatheFire() {
+        System.out.println(name + " Дихає вогнем!🔥");
+    }
+
+    @Override
+    public String toString() {
+        return "Dragon{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                '}';
     }
 }
