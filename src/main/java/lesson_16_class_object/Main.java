@@ -22,13 +22,19 @@ public class Main {
         System.out.println("Вік дракона: " + aurion.getAge());
         System.out.println("Вага дракона: " + aurion.getWeight());
 
+        blaze.voice();
+        blaze.breatheFire();
+
+        aurion.voice();
+        aurion.breatheFire();
+
+        System.out.println(blaze.toString());
         System.out.println(aurion.toString());
 
 
-        try {
-            Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-            Dragon[] dragons = new Dragon[3];
+        Dragon[] dragons = new Dragon[3];
 
             for (int i = 0; i < dragons.length; i++) {
                 System.out.println("\nВведіть дані для дракона #" + (i + 1) + ":");
@@ -48,24 +54,29 @@ public class Main {
 
             System.out.println("\n🔥 Інформація про драконів:");
             for (Dragon d : dragons) {
-                d.showInfo();
+                System.out.println(d);
             }
 
             System.out.println("\n🐲 Дракони підросли!");
             for (Dragon d : dragons) {
-                d.growUp();
+                System.out.println(d);
             }
 
             System.out.println("\n📈 Останні зміни:");
             for (Dragon d : dragons) {
-                d.showInfo();
+                System.out.println(d);
             }
+
+            if (dragons.length > 0) {
+                System.out.println("\nТрюки першого дракона:");
+                dragons[0].voice();
+                dragons[0].breatheFire();
+            }
+
             sc.close();
 
-        } finally {
         }
     }
-}
 
 
 
