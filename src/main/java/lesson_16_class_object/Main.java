@@ -22,6 +22,13 @@ public class Main {
         System.out.println("Вік дракона: " + aurion.getAge());
         System.out.println("Вага дракона: " + aurion.getWeight());
 
+        blaze.voice();
+        blaze.breatheFire();
+
+        aurion.voice();
+        aurion.breatheFire();
+
+        System.out.println(blaze.toString());
         System.out.println(aurion.toString());
 
 
@@ -54,6 +61,12 @@ public class Main {
             System.out.println("\n🐲 Дракони підросли!");
             for (Dragon d : dragons) {
                 d.growUp();
+            }
+
+            if (dragons.length > 0) {
+                System.out.println("\nТрюки першого дракона:");
+                dragons[0].voice();
+                dragons[0].breatheFire();
             }
 
             System.out.println("\n📈 Останні зміни:");
