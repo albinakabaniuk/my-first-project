@@ -5,17 +5,22 @@ public class Dragon {
     private String name;
     private int age;
     public double weight;
+    private Breed breed;
 
     public Dragon() {
         System.out.println("Створено невідомого дракона");
     }
 
-    public Dragon(String name, int age, double weight) {
+    public Dragon(String name, int age, double weight, Breed breed) {
         System.out.println("Створено повноцінного дракона");
 
         this.name = name;
         this.age = age;
         this.weight = weight;
+        this.breed = breed;
+    }
+
+    public Dragon(String name, int age, double weight, Breed[] breed) {
     }
 
     public void setName(String name) {
@@ -28,6 +33,10 @@ public class Dragon {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    public void setBreed(Breed breed) {
+        this.breed = breed;
     }
 
 
@@ -43,9 +52,13 @@ public class Dragon {
         return weight;
     }
 
+    public Breed getBreed() {
+        return this.breed;
+    }
+
 
     public void showInfo() {
-        System.out.println("Ім’я: " + name + ", Вік: " + age + ", Вага: " + weight + " кг");
+        System.out.println("Ім’я: " + name + ", Вік: " + age + ", Вага: " + weight + " кг" + ", Порода: " + breed);
     }
 
     public void growUp() {
@@ -68,6 +81,7 @@ public class Dragon {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", weight=" + weight +
+                ", breed=" + breed +
                 '}';
     }
 }
