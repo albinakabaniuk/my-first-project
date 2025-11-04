@@ -8,7 +8,7 @@ import java.time.LocalDate;
 class CarTest {
 
     @Test
-    void shouldCanDrive() {
+    void shouldBeAbleToDrive() {
         // given
         Car car = new Car(10, 5, 2025);
 
@@ -20,7 +20,7 @@ class CarTest {
     }
 
     @Test
-    void shouldNotCanDrive() {
+    void shouldNotBeAbleToDrive() {
         // given
         Car car = new Car(0, 5, 2025);
 
