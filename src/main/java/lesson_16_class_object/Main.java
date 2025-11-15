@@ -41,6 +41,9 @@ public class Main {
         System.out.println(blaze.toString());
         System.out.println(aurion.toString());
 
+        System.out.println(aurion.equals(blaze));
+        System.out.println("aurion.hashCode = " + aurion.hashCode());
+        System.out.println("blaze.hashCode = " + blaze.hashCode());
 
         try {
             Scanner sc = new Scanner(System.in);
