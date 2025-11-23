@@ -1,5 +1,7 @@
 package lesson_30_interfaces;
 
+import java.util.Optional;
+
 public class Stack<T> implements Stackable<T> {
     private final int maxSize;
     private final Object[] stackArray;
@@ -24,23 +26,22 @@ public class Stack<T> implements Stackable<T> {
     @Override
     public void push(T element) {
         if (isFull()) {
-            System.out.println("Не можу покласти елемент: стек повний!");
-        } else {
-            stackArray[++top] = element;
+            throw new StackOverflowException("Стек повний! Неможливо додати елемент: " + element);
         }
+            stackArray[++top] = element;
+
     }
 
     @SuppressWarnings("unchecked")
     @Override
     public T pop() {
         if (isEmpty()) {
-            System.out.println("Не можу дістати елемент: стек порожній!");
-            return null;
-        } else {
+            throw new StackUnderflowException("Не можу дістати елемент: стек порожній!");
+        }
             T elem = (T) stackArray[top];
             stackArray[top--] = null;
             return elem;
-        }
+
     }
 
     @SuppressWarnings("unchecked")
@@ -60,5 +61,14 @@ public class Stack<T> implements Stackable<T> {
             System.out.print(stackArray[i] + " ");
         }
         System.out.println();
+    }
+
+    public Optional<T> safePop() {
+        if (isEmpty()) {
+            return Optional.empty();
+        }
+        T elem = (T) stackArray[top];
+        stackArray[top--] = null;
+        return Optional.of(elem);
     }
 }
