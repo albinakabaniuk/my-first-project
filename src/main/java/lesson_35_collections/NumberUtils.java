@@ -5,8 +5,8 @@ import java.util.List;
 
 public class NumberUtils {
 
-    public int getSum(List<Integer> numbers) {
-        int sum = 0;
+    public long getSum(List<Integer> numbers) {
+        long sum = 0;
 
         for (int num : numbers) {
             sum += num;
