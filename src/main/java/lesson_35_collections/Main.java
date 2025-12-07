@@ -8,7 +8,7 @@ public class Main {
 
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
-        int sum = utils.getSum(numbers);
+        long sum = utils.getSum(numbers);
         System.out.println("Сума чисел: " + sum);
 
         List<Integer> multiplyOdd = utils.multiplyOddNumber(numbers);
