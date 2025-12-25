@@ -8,7 +8,7 @@ public class Maps {
     public static class MergeMaps {
 
         public static Map<String, Integer> mergeMaps(Map<String, Integer> map1, Map<String, Integer> map2) {
-            Map<String, Integer> result = new LinkedHashMap<>();
+            Map<String, Integer> result = new HashMap<>();
 
             for (String key : map1.keySet()) {
                 result.put(key, map1.get(key));
