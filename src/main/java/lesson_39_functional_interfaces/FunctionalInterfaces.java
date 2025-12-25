@@ -57,7 +57,9 @@ public class FunctionalInterfaces {
     // ===== Частина 2 =====
     //Predicate: перевірка, чи є число простим.
     public static Predicate<Integer> isPrime = number -> {
-        if (number <= 1) return false;
+        if (number <= 1) {
+           return false;
+        }
         for (int i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
                 return false;
