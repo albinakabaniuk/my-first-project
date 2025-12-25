@@ -33,8 +33,7 @@ public class Car {
         carList.forEach(System.out::println);
 
         TreeSet<Car> carTreeSet = new TreeSet<>(
-                Comparator.comparingDouble((Car car) -> car.engineCapacity)
-                        .thenComparingInt(car -> car.yearOfManufacture));
+                Comparator.comparingDouble((Car car) -> car.engineCapacity));
 
         carTreeSet.add(new Car(2011, 1.9));
         carTreeSet.add(new Car(2005, 2.1));
