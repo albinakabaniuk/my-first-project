@@ -85,7 +85,9 @@ public class FunctionalInterfaces {
 
     //UnaryOperator: обчислює число Фібоначчі.
     public static UnaryOperator<Integer> fibonacci = n -> {
-        if (n <= 1) return n;
+        if (n <= 1) {
+           return n;
+        }
 
         int a = 0;
         int b = 1;
